@@ -4,6 +4,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use(express.static("dist"));
 
 let notes = [
   {
@@ -72,7 +73,7 @@ app.post("/api/notes/:id", (request, response) => {
   const id = String(request.params.id);
   const body = request.body;
 
-  notes = notes.map((note) => note.id === id ? body : note);
+  notes = notes.map((note) => (note.id === id ? body : note));
 
   response.json(body);
 });
