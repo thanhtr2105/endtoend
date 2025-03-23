@@ -69,7 +69,7 @@ app.post("/api/notes", (request, response) => {
   response.json(note);
 });
 
-app.post("/api/notes/:id", (request, response) => {
+app.put("/api/notes/:id", (request, response) => {
   const id = String(request.params.id);
   const body = request.body;
 
