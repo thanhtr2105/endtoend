@@ -22,6 +22,11 @@ let notes = [
     content: "GET and POST are the most important methods of HTTP protocol",
     important: true,
   },
+  {
+    id: "4",
+    content: "PUT request is used to update backend data",
+    important: true,
+  },
 ];
 
 app.get("/", (request, response) => {
